@@ -77,7 +77,7 @@ nexus {
 
 group = "com.github.alkurop"
 archivesBaseName = 'stringerbell'
-version = "0.3"
+version = "0.4"
 
 task sourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs

@@ -11,6 +11,24 @@ class Stringer(
         return context.getString(res, *params)
     }
 
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as Stringer
+
+        if (res != other.res) return false
+        if (!params.contentEquals(other.params)) return false
+
+        return true
+    }
+
+    override fun hashCode(): Int {
+        var result = res
+        result = 31 * result + params.contentHashCode()
+        return result
+    }
+
     companion object {
         fun ofString(string: String) = Stringer(R.string.sb_placeholder, string)
     }
