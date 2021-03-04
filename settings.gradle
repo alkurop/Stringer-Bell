@@ -1,0 +1,3 @@
+include ':Stringer-Bell'
+include ':app'
+rootProject.name = "Stringer Bell"
